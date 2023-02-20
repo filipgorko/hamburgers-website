@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hamburgers</title>
+    <link rel="stylesheet" href="websitestyle.css">
+<style>
+
+    a:link {
+  color: rgb(0, 90, 104);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(120, 0, 135);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: rgb(152, 0, 0);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+    * {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: font;
+}
+
+@font-face {
+   font-family: font;
+   src: url(robotofont/Roboto-Regular.woff);
+ }
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: rgb(0, 0, 0);
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  font-size: 108px;
+}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Ingredients', this, 'green')">Ingredients</button>
+<button class="tablink" onclick="openPage('Method', this, 'blue')"> Method</button>
+<button class="tablink" onclick="openPage('Links', this, 'orange')">Links</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>This website is about hamburgers.</p>
+</div>
+
+<div id="Ingredients" class="tabcontent">
+  <h3>Ingredients</h3>
+  <p>The ingredients needed are meat and bread. You can add on; pickles,kectchup,mustard.</p> 
+</div>
+
+<div id="Method" class="tabcontent">
+  <h3>Method</h3>
+  <p>The method is to place the meat on the grill grate and cook, waiting for at least 4 minutes before flipping. Cook until both sides are browned and the meat is cooked to the desired doneness, about 10 minutes total for medium-rare. Assemble the hamburgers.Let the hamburgers rest for about 5 minutes before serving. Enjoy!</p>
+</div>
+
+<div id="Links" class="tabcontent">
+  <h3>Links</h3>
+  <p>Mcdonalds -- <a href="https://www.mcdonalds.com/gb/en-gb.html" target="_blank">www.mcdonalds.com</a></p>
+  <p>Burger king -- <a href="https://www.burgerking.co.uk/" target="_blank">www.burgerking.com</a></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</style>
+</head>
+<body>
+</body>
+</html>

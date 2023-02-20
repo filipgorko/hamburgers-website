@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  @font-face {
+   font-family: font;
+   src: url(robotofont/Roboto-Regular.woff);
+ }
+  
+p {
+    color: rgb(43,43,43);
+    font-size: 78px;
+    text-align: left;
+    font-family: font;
+ }
+
+ #para1 {color: rgb(43,43,43);
+   font-size: 78px;
+   text-align: right;
+   
+}
+
+ h1 {
+    color: rgb(43,43,43);
+    font-size: 118px;
+    text-align: center;
+    font-family: font;
+ }
